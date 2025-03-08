@@ -43,10 +43,10 @@ def download_file(file_download_link: str, download_path: pathlib.Path) -> Union
         with open(download_path, "wb") as f:
             for chunk in response.iter_content(chunk_size=1024):
                 f.write(chunk)
-        print(f"[*INFO*] - Downloaded: {download_path}")
+        print(f"\n[*INFO*] - Downloaded: {download_path}\n")
         return download_path
     else:
-        print(f"[*ERROR*] - Failed to download: {file_download_link}")
+        print(f"\n[*ERROR*] - Failed to download: {file_download_link}\n")
         return None
 
 def _download_ipas_from_swaggyp36000_trollstore_ipas(download_dir:Optional[pathlib.Path]=None, max_download_versions=6,):
@@ -92,7 +92,7 @@ def _download_ipas_from_swaggyp36000_trollstore_ipas(download_dir:Optional[pathl
 
             download_file(download_url, download_file_path)
 
-        msg = f"[*INFO*] - finish downloading #{str(app_idx).zfill(3)}: {app_name}\n"
+        msg = f"[*INFO*] - finish downloading #{str(app_idx).zfill(3)}: {app_name} ☑️\n"
         print(msg)
 
 
