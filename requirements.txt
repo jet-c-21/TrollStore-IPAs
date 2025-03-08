@@ -1,4 +1,4 @@
 pandas
 tqdm
-pillow
-pymediainfo
+github
+beautifulsoup4
