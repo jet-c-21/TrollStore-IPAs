@@ -1,4 +1,6 @@
 pandas
 tqdm
-github
+PyGithub
+requests
 beautifulsoup4
+python-dotenv
